@@ -1,4 +1,13 @@
+Always show details
 
+Copy
+# Update the style.css to incorporate the requested changes:
+# - Move and resize the name header
+# - Add spacing between About Me and Expertise columns
+# - Adjust social icon colors for better contrast
+# - Center the timeline circles over the vertical line
+
+updated_style_css = """
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
 body {
@@ -13,16 +22,17 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
   padding: 2rem;
   background-color: #1c1c1c;
   border-bottom: 1px solid #333;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
-  margin: 0;
+  margin: 1.5rem 0 0.25rem;
 }
 
 header p {
@@ -45,6 +55,7 @@ header nav a {
   color: #e0e0e0;
   background: transparent;
   text-decoration: none;
+  margin-top: 1.5rem;
 }
 
 section {
@@ -64,6 +75,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 2rem;
 }
 
 #about > div {
@@ -79,7 +91,7 @@ h2 {
   margin-right: 10px;
   font-size: 1.5rem;
   text-decoration: none;
-  color: #ccc;
+  color: #66aaff; /* Brighter for better contrast */
 }
 
 .project-card {
@@ -111,22 +123,24 @@ h2 {
   border-left: 2px solid #ff6b6b;
   padding-left: 1rem;
   list-style: none;
+  position: relative;
 }
 
 .timeline li {
   margin-bottom: 1.5rem;
   position: relative;
+  padding-left: 1.5rem;
 }
 
 .timeline li::before {
   content: '';
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background: #ff6b6b;
   border-radius: 50%;
   position: absolute;
   left: -1.1rem;
-  top: 0.2rem;
+  top: 0.35rem;
 }
 
 footer {
