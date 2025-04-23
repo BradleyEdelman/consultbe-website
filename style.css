@@ -1,13 +1,3 @@
-Always show details
-
-Copy
-# Update the style.css to incorporate the requested changes:
-# - Move and resize the name header
-# - Add spacing between About Me and Expertise columns
-# - Adjust social icon colors for better contrast
-# - Center the timeline circles over the vertical line
-
-updated_style_css = """
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
 body {
