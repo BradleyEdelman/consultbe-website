@@ -152,6 +152,30 @@ h2 {
   top: 0.4rem;
 }
 
+#contact {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-top: 2rem;
+  border: 1px solid #333;
+  text-align: center;
+}
+
+#contact h2 {
+  color: #ed7464;
+}
+
+#contact a {
+  color: #9bd8db;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+  color: #1b9b9d;
+}
+
 footer {
   text-align: center;
   padding: 2rem 0;
