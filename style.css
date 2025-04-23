@@ -25,17 +25,11 @@ header h1 {
   margin: 1.5rem 0 0.25rem;
 }
 
-header p {
-  margin: 0.25rem 0 0;
+header h2 {
+  font-size: 1rem;
   font-weight: 300;
   color: #aaa;
-}
-
-header nav a {
-  color: #66aaff;
-  margin-left: 1rem;
-  text-decoration: none;
-  font-weight: 400;
+  margin-top: 0.5rem;
 }
 
 .contact-button {
@@ -81,7 +75,13 @@ h2 {
   margin-right: 10px;
   font-size: 1.5rem;
   text-decoration: none;
-  color: #66aaff; /* Brighter for better contrast */
+}
+
+.social-links img {
+  filter: invert(90%);
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
 }
 
 .project-card {
@@ -111,7 +111,7 @@ h2 {
 
 .timeline {
   border-left: 2px solid #ff6b6b;
-  padding-left: 1rem;
+  padding-left: 2rem;
   list-style: none;
   position: relative;
 }
@@ -119,7 +119,7 @@ h2 {
 .timeline li {
   margin-bottom: 1.5rem;
   position: relative;
-  padding-left: 1.5rem;
+  padding-left: 0;
 }
 
 .timeline li::before {
@@ -129,8 +129,8 @@ h2 {
   background: #ff6b6b;
   border-radius: 50%;
   position: absolute;
-  left: -1.1rem;
-  top: 0.35rem;
+  left: -26px;
+  top: 0.4rem;
 }
 
 footer {
