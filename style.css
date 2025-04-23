@@ -23,12 +23,13 @@ header h1 {
   font-size: 1.8rem;
   font-weight: 600;
   margin: 1.5rem 0 0.25rem;
+  color: #ed7464;
 }
 
 header h2 {
   font-size: 1rem;
   font-weight: 300;
-  color: #aaa;
+  color: #9bd8db;
   margin-top: 0.5rem;
 }
 
@@ -40,6 +41,13 @@ header h2 {
   background: transparent;
   text-decoration: none;
   margin-top: 1.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.contact-button:hover {
+  background-color: #1b9b9d;
+  color: #fff;
+  border-color: #1b9b9d;
 }
 
 section {
@@ -52,7 +60,7 @@ h2 {
   font-weight: 600;
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: #ccc;
+  color: #ed7464;
 }
 
 #about {
@@ -78,10 +86,16 @@ h2 {
 }
 
 .social-links img {
-  filter: invert(90%);
+  filter: invert(80%) sepia(20%) hue-rotate(170deg);
   width: 24px;
   height: 24px;
   vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.1);
+  filter: invert(70%) sepia(30%) saturate(250%) hue-rotate(160deg) brightness(110%);
 }
 
 .project-card {
@@ -89,18 +103,23 @@ h2 {
   padding: 1rem;
   border-radius: 8px;
   margin: 1rem 0;
-  border: 1px solid #333;
+  border: 1px solid #9bd8db;
   flex: 1 1 30%;
+  transition: box-shadow 0.2s ease;
 }
 
 .project-card h3 {
-  color: #ff6b6b;
+  color: #ed7464;
   margin-top: 0;
 }
 
 .project-card a {
-  color: #66aaff;
+  color: #9bd8db;
   text-decoration: none;
+}
+
+.project-card:hover {
+  box-shadow: 0 0 10px #1b9b9d;
 }
 
 .projects-container {
@@ -110,7 +129,7 @@ h2 {
 }
 
 .timeline {
-  border-left: 2px solid #ff6b6b;
+  border-left: 2px solid #ed7464;
   padding-left: 2rem;
   list-style: none;
   position: relative;
@@ -126,7 +145,7 @@ h2 {
   content: '';
   width: 12px;
   height: 12px;
-  background: #ff6b6b;
+  background: #ed7464;
   border-radius: 50%;
   position: absolute;
   left: -26px;
@@ -138,5 +157,6 @@ footer {
   padding: 2rem 0;
   font-size: 0.9rem;
   color: #777;
+  background-color: #101920;
   border-top: 1px solid #333;
 }
