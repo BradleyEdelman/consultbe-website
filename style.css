@@ -12,27 +12,27 @@ body {
 /* Header */
 .centered-header {
   text-align: center;
-  padding: 2rem;
+  padding: 3rem;
   background-color: #1c1c1c;
   border-bottom: 1px solid #333;
 }
 
 .centered-header h1 {
-  font-size: 1.8rem;
+  font-size: 3.5rem;
   font-weight: 600;
   margin: 1.5rem 0 0.25rem;
   color: #ed7464;
 }
 
 .centered-header h2 {
-  font-size: 1rem;
+  font-size: 2.25rem;
   font-weight: 300;
   color: #9bd8db;
   margin-top: 0.5rem;
 }
 
 .centered-header p {
-  font-size: 1rem;
+  font-size: 2.25rem;
   color: #ccc;
 }
 
@@ -65,6 +65,7 @@ h2 {
 
 #about p {
   font-weight: 300;
+  text-align: justify;
 }
 
 /* Social Icons */
@@ -76,8 +77,8 @@ h2 {
 
 .social-links img {
   filter: invert(80%) sepia(20%) hue-rotate(170deg);
-  width: 35px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
   vertical-align: middle;
   transition: transform 0.2s ease;
 }
@@ -87,30 +88,29 @@ h2 {
   filter: invert(70%) sepia(30%) saturate(250%) hue-rotate(160deg) brightness(110%);
 }
 
-/* Expertise */
-.expertise-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
+/* Card layout used in both expertise and projects */
 .card-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  max-width: 960px;
-  margin: 0 auto;
+  /* max-width: 960px;
+  margin: 0 auto; */
 }
 
-.expertise-card {
-  width: 250px;
+/* Shared card size */
+.expertise-card,
+.project-card {
+  width: 270px;
   height: 180px;
-  margin: 0.5rem;
-  perspective: 1000px;
+  margin: .75rem;
   flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+/* Expertise Cards */
+.expertise-card {
+  perspective: 1000px;
 }
 
 .card-inner {
@@ -125,7 +125,6 @@ h2 {
   transform: rotateY(180deg);
 }
 
-/* Card faces */
 .card-front, .card-back {
   position: absolute;
   width: 100%;
@@ -145,8 +144,8 @@ h2 {
 }
 
 .card-front img {
-  width: 60px;
-  height: 60px;
+  width: 75px;
+  height: 75px;
   margin-bottom: 0.5rem;
   filter: invert(80%) sepia(20%) hue-rotate(170deg);
 }
@@ -162,35 +161,13 @@ h2 {
   color: #e0e0e0;
 }
 
-
-
-/* Projects */
-.projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.card-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
+/* Project Cards */
 .project-card {
-  width: 250px;
-  height: 180px;
-  margin: 0.5rem;
   background: #1f1f1f;
   padding: 1rem;
   border-radius: 8px;
   border: 2px solid #9bd8db;
   transition: box-shadow 0.2s ease;
-  flex-shrink: 0;
 }
 
 .project-card h3 {
@@ -198,13 +175,25 @@ h2 {
   margin-top: 0;
 }
 
-.project-card a {
-  color: #9bd8db;
-  text-decoration: none;
+.project-card p {
+  color: #e0e0e0;
+  font-weight: 300;
 }
 
 .project-card:hover {
   box-shadow: 0 0 20px #1b9b9d;
+}
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.project-link:hover .project-card {
+  box-shadow: 0 0 20px #1b9b9d;
+  transform: translateY(-2px);
+  transition: 0.3s ease;
 }
 
 /* Contact */
@@ -244,6 +233,15 @@ h2 {
 
 .contact-form input,
 .contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  font-family: inherit;
+}
+
+.contact-form select {
   padding: 0.75rem;
   border: 1px solid #444;
   border-radius: 5px;

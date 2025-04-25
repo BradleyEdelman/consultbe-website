@@ -13,16 +13,16 @@
   <header class="centered-header">
     <h1>BE Global Consulting LLC</h1>
     <h2>Brad Edelman, PhD</h2>
-    <p>Data Scientist | Machine Learning Engineer | Imaging Expert</p>
+    <p>Imaging Expert | Data Scientist | Machine Learning Engineer </p>
   </header>
 
   <section id="about">
     <div>
       <h2>About me</h2>
       <p>
-        I am a biomedical engineer by training, with previous research positions at top-tier institutions including Carnegie Mellon University, the University of Minnesota, Stanford University School of Medicine, and the Max Planck Society.<br><br>
-        I provide consulting services across a range of data science domains, including imaging analysis, cloud computing, software development, and machine learning.<br><br>
-        I have authored over 20 peer-reviewed publications and hold two patents in imaging, brain-computer interfaces, and machine learning.
+        I'm a biomedical engineer by training, with previous research positions at top-tier institutions such as Carnegie Mellon University, The University of Minnesota, Stanford University School of Medicine, and the Max Planck Society.<br><br>
+        I provide consulting services across a range of technical and data-science domains, including imaging analysis, cloud computing, software development, and machine learning.<br><br>
+        I've authored over 20 peer-reviewed publications in biomedical imaging, brain-computer interfaces, and machine learning, and hold two patents.
       </p>
       <div class="social-links">
         <a href="https://github.com/bradleyEdelman" target="_blank" aria-label="GitHub">
@@ -50,11 +50,11 @@
       <div class="expertise-card">
         <div class="card-inner">
           <div class="card-front">
-            <img src="https://img.icons8.com/ios-filled/50/image.png" alt="Imaging" />
+            <img src="https://img.icons8.com/ios-filled/50/microscope.png" alt="Imaging" />
             <h3>Image Analysis</h3>
           </div>
           <div class="card-back">
-            <p>EEG, MRI, ultrasound, microscopy. Specialized in image registration, segmentation, time-series analysis, and signal processing.</p>
+            <p>EEG, MRI, ultrasound, microscopy, etc.. Specialized in image registration, segmentation, time-series analysis, and signal processing.</p>
           </div>
         </div>
       </div>
@@ -66,7 +66,7 @@
             <h3>Cloud & DevOps</h3>
           </div>
           <div class="card-back">
-            <p>Deploying scalable ML pipelines using AWS, S3, Databricks, Docker. Focused on reproducibility and automation.</p>
+            <p>Deploying scalable ML pipelines using AWS, S3, Databricks, Docker. Focused on reproducibility, automation, and cost savings.</p>
           </div>
         </div>
       </div>
@@ -78,44 +78,97 @@
             <h3>Deep Learning</h3>
           </div>
           <div class="card-back">
-            <p>CNNs, MIL, transformers for medical data. Optimization for deployment and inference on edge or cloud-based platforms.</p>
+            <p>CNNs, MIL, transformers for imaging data. Optimization for deployment and inference on edge or cloud-based platforms.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
-  
 
   <section id="projects">
     <h2>Featured Projects</h2>
-    <div class="card-row"> <!-- updated from projects-container -->
-      <div class="project-card">
-        <h3>&lt;/&gt; Project Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="project-card">
-        <h3>&lt;/&gt; Project Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="project-card">
-        <h3>&lt;/&gt; Project Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
+    <div class="card-row">
+      <a href="https://your-project-link.com" class="project-link" target="_blank" rel="noopener">
+        <div class="project-card">
+          <h3>WSI Tumor Detection</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </a>
+      <a href="https://github.com/BradleyEdelman/AWS-ML-Training-Automation" class="project-link" target="_blank" rel="noopener">
+        <div class="project-card">
+          <h3>Automated AWS ML Training</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </a>
+      <a href="https://github.com/BradleyEdelman/EdgeTrain" class="project-link" target="_blank" rel="noopener">
+        <div class="project-card">
+          <h3>Edge AI Optimization</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </a>
     </div>
-
   </section>
   
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>If you're interested in collaborating, consulting, or just want to talk tech—I'd love to hear from you.</p>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
-      <input type="text" name="name" placeholder="Name" required>
-      <input type="email" name="email" placeholder="Email" required>
+    <p>If you're interested in collaborating, consulting work, or just want to talk tech - I'd love to hear from you!</p>
+    
+    <form action="https://formsubmit.co/contact@consultbe.com" method="POST" class="contact-form">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="New Contact from BE Global">
+      <input type="hidden" name="_template" value="table">
+    
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+    
+      <select name="project" required>
+        <option value="" disabled selected>Reason for Contact</option>
+        <option value="General Inquiry">General Inquiry</option>
+        <option value="Project Collaboration">Project Collaboration</option>
+        <option value="Consulting Request">Consulting Request</option>
+      </select>
+    
       <textarea name="message" placeholder="Message" rows="5" required></textarea>
       <button type="submit">Send</button>
     </form>
+  
+    <p id="form-message" style="display: none; color: #9bd8db; margin-top: 1.5rem;">
+      Thank you! Your message has been sent.
+    </p>
   </section>
+  
+  <script>
+    const form = document.querySelector(".contact-form");
+    const message = document.getElementById("form-message");
+  
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      const button = form.querySelector("button");
+      button.disabled = true;
+      button.textContent = "Sending...";
+
+      fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          message.style.display = "block";
+          form.reset();
+        } else {
+          alert("Oops! Something went wrong.");
+        }
+        button.disabled = false;
+        button.textContent = "Send";
+      }).catch(error => {
+        alert("Oops! There was a problem submitting your form");
+        button.disabled = false;
+        button.textContent = "Send";
+      });
+    });
+  </script>
 
   <footer>
     <p>© 2025 Brad Edelman. All rights reserved.</p>
